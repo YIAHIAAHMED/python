@@ -22,3 +22,17 @@ doubled_nums = map(doubled, numbers)
 squared_nums = map(lambda x: x*x, numbers)
 # print(list(doubled_nums))
 print(list(squared_nums))
+
+
+actors = [
+    {'name': 'sabana', 'age':65},
+    {'name': 'sabnoor', 'age':45},
+    {'name': 'sabila noor', 'age':30},
+    {'name': 'srabonti', 'age':38},
+    {'name': 'shaon', 'age':47},
+]
+
+juniors = filter(lambda actor: actor['age']<40, actors)
+Fivers = filter(lambda actor : actor['age'] % 5==0, actors)
+# print(list(juniors))
+print(list(Fivers))
