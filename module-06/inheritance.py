@@ -23,13 +23,17 @@ class Laptop:
     def coding(self):
         return f'learning python and practicing'
     
-class Phone:
-    def __init__(self, dual_sim):
+class Phone(Gadget):
+    def __init__(self, brand, price, color, origin, dual_sim):
         self.dual_sim = dual_sim
+        super().__init__(brand, price, color, origin)
 
 
     def phone_call(self, number, text):
         return f'sending SMS to: {number} with: {text}'
+    
+    def __repr__(self):
+        return f'phone: {self.brand} {self.price} {self.dual_sim}'
     
 class Camera:
     def __init__(self, pixel):
@@ -39,5 +43,10 @@ class Camera:
 
     def change_lens(self):
         pass
+
+# inheritance
+my_phone = Phone('iphone', 120000, 'china', True)
+print(my_phone.brand)
+print(my_phone)
 
     
