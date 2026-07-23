@@ -1,1 +1,1 @@
-python3 module-05/methods.py
+python3 module-06/goriber_gedget.py
