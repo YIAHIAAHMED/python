@@ -28,7 +28,7 @@ class Hall:
             print('\n-------------------------------\n')
             for i in self.show_list: #ekhane i holo tuple
                 if i[0] == id:
-                    print('\n movie: ',i[1], '\t Time: Today ', i[2], end='\n')
+                    print('\n movie: ',i[1], '\t Time: Today ', i[2], end='\n\n')
             for x in range(self.row):
                 for y in range(self.col):
                     if (self.seats[id][x][y] == 'free'):
@@ -39,17 +39,37 @@ class Hall:
 
 
     def book_tickets(self, id, name, phone, booking_seats):
-        for x in booking_seats:
-            r = ord(x[0])-65 # A er ASSCII value 65
-            c = ord(x[1])-49 # 1 er ASSCII value 49
-            # print(r,c)
-            if r >= self.row or c >=self.col or r < 0 or c < 0:
-                print('seat doesnt exists.')
-            elif self.seats[id][r][c]!= 'free':
-                print(x, 'is already booked')
-            
-            else:
-                self.seats[id][r][c] = 'x'
+        flag = 0
+        self.booked_tickets = []
+        if id not in self.seats:
+            print('wrong show id')
+        else:
+            for x in booking_seats:
+                r = ord(x[0])-65 # A er ASSCII value 65
+                c = ord(x[1])-49 # 1 er ASSCII value 49
+                # print(r,c)
+                if r >= self.row or c >=self.col or r < 0 or c < 0:
+                    print('seat doesnt exists.')
+                elif self.seats[id][r][c]!= 'free':
+                    print(x, 'is already booked')
+                
+                else:
+                    self.seats[id][r][c] = 'X'
+                    self.booked_tickets.append(x)
+                    flag = 1
+        if flag == 1:
+            print('\n\t ######### Ticket Booked Successfully Done ######')
+            print('\n-------------------------------\n')
+            print('Name: ',name)
+            print('Phone: ',phone)
+            for i in self.show_list:
+                if i[0] == id:
+                    print('MOVIE: ', i[1], ' Time: today at', i[2])
+            print('Tickets: ', end=' ')
+            for i in self.booked_tickets:
+                print(i, end=' ')
+            print('\n Hall no: ', self.hall_no)
+            print('price: ', 500*len(self.booked_tickets), 'TK')
 
 
 
