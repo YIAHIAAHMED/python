@@ -1,0 +1,4 @@
+Anisul Islam = Lecturer of ICT
+Rabeya Begum = Lecturer of Bangla
+Emraj Chowdhury = Lecturer of English
+Estehad Alam = Lecturer of Math
