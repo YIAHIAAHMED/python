@@ -7,7 +7,7 @@
 # print(file.readable())
 # file.close()
 
-file = open("anisul_islam_2/file.txt", "r+") # anisul_islam_2 eta disi jehetu python3 anisul_islam_2/file.py erokom dichi
+# file = open("anisul_islam_2/file.txt", "r+") # anisul_islam_2 eta disi jehetu python3 anisul_islam_2/file.py erokom dichi
 # print(file.readable())
 
 # text = file.read()
@@ -25,8 +25,16 @@ file = open("anisul_islam_2/file.txt", "r+") # anisul_islam_2 eta disi jehetu py
 # file.close()
 
 # for loop er madhome
-for line in file:
-    print(line)
+# for line in file:
+#     print(line)
+
+# file.close()
+
+
+# append korar jonne 'a' use korte hoy
+file = open("anisul_islam_2/file.txt", "w")
+
+file.write('\nSadi - lecturer of physics')
 
 file.close()
 
