@@ -4,4 +4,4 @@ python3 w_2_concept-02/movie_ticket_booking_system.py
 
 python3 anisul_islam_2/class_object.py
 python3 anisul_islam_3/method.py
-python anisul_islam_3/inheritance.py
+python anisul_islam_3/method_overriding.py
