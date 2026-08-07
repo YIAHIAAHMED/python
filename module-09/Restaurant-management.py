@@ -93,7 +93,7 @@ class Restaurant:
      def __init__(self, name):
           self.name = name
           self.employees = [] # eta hocche amader database
-          self.menu = FoodItem()
+          self.menu = Menu()
 
      def add_employee(self, employee):
          self.employees.append(employee)
@@ -138,11 +138,14 @@ class FoodItem:
              
                     
 
-
+mamar_res = Restaurant('Mamar Restaurant')
 mn = Menu()
 item = FoodItem('Pizza', 12, 10)
 item2 = FoodItem('Burger', 10, 30)
-mn.add_menu_item(item)
-mn.add_menu_item(item2)
-mn.show_menu()
+admin = Admin('Rahim', 'r@gmail.com', 123333, 'Dhaka')
+admin.add_new_item(mamar_res,item)
+admin.add_new_item(mamar_res,item2)
 
+
+customer1 = Customer('Rahim', 'r@gmail.com', 123333, 'Dhaka')
+customer1.view_menu(mamar_res)
